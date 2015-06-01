@@ -50,7 +50,7 @@ gulp.task('jade', function () {
 
 //jade
 gulp.task('sass', function () {
-  gulp.src('sass/*.sass')
+  gulp.src('sass/*')
 	.pipe(sass())
 	.pipe(gulp.dest('css/'));
 });
