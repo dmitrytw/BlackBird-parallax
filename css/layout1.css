@@ -57,6 +57,12 @@ img {
   left: 50%;
   margin-left: -480px; }
 
-.cloth-pics figure {
+.clothes-pics figure {
   margin-bottom: 20px;
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease-in-out; }
+  .clothes-pics figure.is-showing {
+    opacity: 1;
+    transform: translateX(0px); }

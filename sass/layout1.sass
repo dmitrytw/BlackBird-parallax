@@ -75,8 +75,16 @@ img
 
 // Model Grid
 
-.cloth-pics
+.clothes-pics
   figure
     margin-bottom: 20px
     position:relative
+    opacity:0
+    transform: translateX(20px)
+    transition: all 0.3s ease-in-out
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
 
