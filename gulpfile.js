@@ -41,6 +41,12 @@ gulp.task('html', function () {
     .pipe(connect.reload());
 });
 
+//Js
+gulp.task('js', function () {
+  gulp.src('app/js/*.js')
+    .pipe(connect.reload());
+});
+
 //jade
 gulp.task('jade', function () {
   gulp.src('jade/*.jade')
@@ -61,7 +67,8 @@ gulp.task('watch', function() {
 	gulp.watch('app/*.html', ['html'])
 	gulp.watch('jade/*.jade', ['jade'])
 	gulp.watch('sass/*.sass', ['sass'])
+  gulp.watch('app/js/*.js', ['js'])
 });
 
 //default
-gulp.task('default', ['connect','css', 'html', 'jade', 'sass', 'watch']);
+gulp.task('default', ['connect','css', 'html', 'jade', 'sass', 'js', 'watch']);
