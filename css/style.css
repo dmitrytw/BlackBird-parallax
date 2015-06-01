@@ -916,7 +916,41 @@ img {
   height: 640px;
   background-image: url(/images/model2.jpg);
   background-position: center 0px;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-attachment: fixed;
   margin-top: 100px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  position: relative; }
+  .large-window .window-tint {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .large-window .promo-text {
+    color: #fff;
+    font-weight: 100;
+    font-size: 50px; }
+    .large-window .promo-text strong {
+      display: block;
+      font-size: 30; }
+    .large-window .promo-text span {
+      font-weight: 300;
+      font-size: 18px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.6); }
+    .large-window .promo-text .window-cta {
+      font-size: 20px;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid white;
+      padding: 10px 20px;
+      transition: all 0.3s ease-in-out; }
+      .large-window .promo-text .window-cta:hover {
+        background: #fff;
+        color: black; }
