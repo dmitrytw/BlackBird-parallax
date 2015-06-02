@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	jade = require('gulp-jade'),
 	sass = require('gulp-sass'),
+  plumber = require('gulp-plumber'),
 	connect = require('gulp-connect');
 
 //server connect
@@ -44,6 +45,7 @@ gulp.task('html', function () {
 //Js
 gulp.task('js', function () {
   gulp.src('app/js/*.js')
+    .pipe(plumber())
     .pipe(connect.reload());
 });
 
@@ -51,6 +53,7 @@ gulp.task('js', function () {
 gulp.task('jade', function () {
   gulp.src('jade/*.jade')
   	.pipe(jade())
+    .pipe(plumber())
   	.pipe(gulp.dest('app/'));
 });
 
@@ -58,6 +61,7 @@ gulp.task('jade', function () {
 gulp.task('sass', function () {
   gulp.src('sass/*')
 	.pipe(sass())
+  .pipe(plumber())
 	.pipe(gulp.dest('css/'));
 });
 
