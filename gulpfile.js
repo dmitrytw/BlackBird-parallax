@@ -52,16 +52,16 @@ gulp.task('js', function () {
 //jade
 gulp.task('jade', function () {
   gulp.src('jade/*.jade')
-  	.pipe(jade())
-    .pipe(plumber())
+  	.pipe(plumber())
+    .pipe(jade())
   	.pipe(gulp.dest('app/'));
 });
 
 //jade
 gulp.task('sass', function () {
   gulp.src('sass/*')
-	.pipe(sass())
-  .pipe(plumber())
+	.pipe(plumber())
+  .pipe(sass())
 	.pipe(gulp.dest('css/'));
 });
 
